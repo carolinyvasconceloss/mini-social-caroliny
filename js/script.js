@@ -17,3 +17,24 @@ function curtir() {
 }
 
 document.getElementById("likeBtn").addEventListener("click", curtir);
+
+
+let deslikeCount = 0;
+let descurtir = false; // flag booleana
+
+function descurtir() {
+
+ if(descurtir == false){
+    deslikeCount++;
+    descurtir = true;
+    document.getElementById("deslikeCount").innerText = deslikeCount;
+ }else{
+    deslikeCount--;
+    descurtir = false;
+    document.getElementById("deslikeCount").innerText = deslikeCount;
+ }
+
+  
+}
+
+document.getElementById("deslikeBtn").addEventListener("click", descurtir);
